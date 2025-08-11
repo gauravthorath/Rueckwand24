@@ -5,9 +5,7 @@ import { CoordinateForm } from "./components/CoordinateForm.tsx";
 import { MaterialSelector } from "./components/MaterialSelector.tsx";
 import type { CircleData, Material } from "./types.ts";
 import { computePercentages } from "./utils/coords.ts";
-
-const DEFAULT_IMAGE =
-	"src/assets/SampleImage.jpg?q=80&w=1200&auto=format&fit=crop";
+import SampleImage from "../../assets/SampleImage.jpg";
 
 export const DesignerPage = () => {
 	const [circles, setCircles] = useState<CircleData[]>([]);
@@ -78,7 +76,7 @@ export const DesignerPage = () => {
 					<div className="flex-1">
 						<div className="glass rounded-3xl p-8 shadow-lg">
 							<ImageStage
-								src={DEFAULT_IMAGE}
+								src={SampleImage}
 								circles={circles}
 								onMove={handleMove}
 								onSubmit={handleSubmit}
